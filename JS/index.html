@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>display</div>
+    <script>
+      function init() {
+        const pi = 3.14;
+        return function Area(r) {
+          return pi * r * r;
+        };
+      }
+
+      const getArea = init();
+      console.log(getArea(1));
+
+      // high order function
+
+      let lowercase = function (str) {
+        return str.toLowerCase();
+      };
+
+      let uppercase = function (str) {
+        return str.toUpperCase();
+      };
+
+      let transform = function (str, type) {
+        return type(str);
+      };
+
+      console.log(transform("NoooRRRR", lowercase));
+
+      // example 2 - returning function in higher order function
+
+      function multiply(factor) {
+        return function (n) {
+          return n * factor;
+        };
+      }
+
+      const double = multiply(2);
+      const triple = multiply(3);
+      console.log(double);
+
+      console.log(double(3));
+      console.log(double(4));
+    </script>
+  </body>
+</html>

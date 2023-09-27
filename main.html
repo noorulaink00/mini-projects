@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <style>
+      .cards{
+        display: flex;
+      }
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* Style the image inside the card */
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Mini JavaScript Projects</h1>
+    </div>
+<div class="cards">
+
+
+    <div class="card" onclick="redirectToPage('./Meme Generator/meme.html')">
+        <img src="./meme.jfif" alt="Image 1">
+        <h3>Meme Generator</h3>
+  
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" onclick="redirectToPage('page2.html')">
+        <img src="image2.jpg" alt="Image 2">
+        <h3>Card 2</h3>
+        <p>Description for Card 2</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" onclick="redirectToPage('page3.html')">
+        <img src="image3.jpg" alt="Image 3">
+        <h3>Card 3</h3>
+        <p>Description for Card 3</p>
+    </div>
+</div>
+   
+    <script>
+        function redirectToPage(pageUrl) {
+            window.location.href = pageUrl;
+        }
+    </script>
+</body>
+</html>
